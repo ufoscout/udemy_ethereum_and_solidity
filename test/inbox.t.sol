@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "src/ballot.sol";
+import "src/inbox.sol";
 
 contract InboxTest is Test {
 
@@ -13,11 +13,11 @@ contract InboxTest is Test {
     }
 
     function testInitialMessage() public {
-        assertEq("Hello", inbox.getMessage());
+        assertEq("Hello", inbox.message());
     }
 
     function testSetMessage() public {
         inbox.setMessage("New Hello");
-        assertEq("New Hello", inbox.getMessage());
+        assertEq("New Hello", inbox.message());
     }
 }

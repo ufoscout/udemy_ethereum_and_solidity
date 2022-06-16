@@ -3,8 +3,8 @@
 pragma solidity >=0.8.0;
 
 /** 
- * @title Ballot
- * @dev Implements voting process along with vote delegation
+ * @title Inbox
+ * @dev Sets messages
  */
 contract Inbox {
     
@@ -16,10 +16,6 @@ contract Inbox {
 
     function setMessage(string memory newMessage) public {
         message = newMessage;
-    }
-
-    function getMessage() public view returns (string memory){
-        return message;
     }
 
 }
