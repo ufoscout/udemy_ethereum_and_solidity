@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  ganache-cli:
+    image: "trufflesuite/ganache"
+    entrypoint: node /app/dist/node/cli.js 
+      --wallet.accounts 0x15382a42b5c90977a88facd908bfddcca49ebb11065fe2849eb08a4d2ffdf4c9,1000000000000000000000
+      --wallet.accounts 0xb4e274f98fd93bc323b46432b45edb546008134b02a36ddac544e20f97a8c594,1000000000000000000000
+      --wallet.accounts 0x63a77b409beade99e6c7b295ca7e17687c6ecae371dd3a9e2139f9b3793d740f,1000000000000000000000
+      --wallet.accounts 0x93a975ee5b38166478455c2c7473973193112f3bd38da63e45ffacd48ca7e8ec,1000000000000000000000
+      --wallet.accounts 0xa36833e3802dccdd7ad4700ad76a3e5d6f5a77bbf14ab87a969cec42002a9e91,1000000000000000000000
+    ports:
+      - 8545:8545
+    
